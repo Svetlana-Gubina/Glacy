@@ -2,17 +2,18 @@
 <html lang="ru">
    <head>
       <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>Глэйси магазин мороженного</title>
+      <link href="css/styles.css" rel="stylesheet">
    </head>
-   <body class="inner-page">
+   <body class="inner-page background">
       <header class="page-header">
-         <h1>Глэйси каталог товаров</h1>
          <a class="logo"><img src="img/logo.png" width="154" height="64" alt="Логотип Glacy shop"></a>
          <nav>
             <ul class="main-navigation">
                <li>
                   <a class="active" href="#">Каталог</a>
-                  <ul class="submenu">
+                  <ul class="submenu visually-hidden">
                      <li><a href="#">Новинки</a></li>
                      <li><a href="#">Сливочное</a></li>
                      <li><a href="#">Щербет</a></li>
@@ -25,7 +26,7 @@
             </ul>
             <div class="user-navigation">
                <p class="search">Поиск</p>
-               <div class="modal modal-search">
+               <div class="modal modal-search visually-hidden">
                   <form action="#" method="post">
                      <label>
                      <input type="search" name="search" placeholder=" Что ищем?">
@@ -33,7 +34,7 @@
                   </form>
                </div>
                <a href="#">Вход</a>
-               <div class="modal modal-login">
+               <div class="modal modal-login visually-hidden">
                   <form action="#" method="post">
                      <label>
                      <input type="email" name="email" placeholder="Электронная почта">
@@ -47,7 +48,7 @@
                   <a href="#">Новая регистрация</a>
                </div>
                <a class="cart" href="#">2 товара</a>
-               <div class="modal modal-cart">
+               <div class="modal modal-cart visually-hidden">
                   <table>
                      <tr>
                         <td><button type="button">x</button></td>
@@ -78,6 +79,7 @@
          </div>
       </header>
       <main class="container">
+         <h1 class="visually-hidden">Глэйси каталог товаров</h1>
          <ul class="breadcrumbs">
             <li><a href="#">Главная</a></li>
             <li><a href="#">Главная</a></li>
@@ -86,6 +88,19 @@
          <section class="filter">
             <h2>Сливочное мороженое</h2>
             <form action="#" method="post">
+               <fieldset class="sort fieldset" style="border:0px;">
+                  <legend>Сортировка:</legend>
+                  <!--<a href="#">по популярности</a>
+                  <a href="#">сначала недорогие</a>
+                  <a href="#">сначала дорогие</a>
+                  <a href="#">по жирности</a>-->
+                  <select>
+                        <option selected>по популярности</option>
+                        <option>сначала недорогие</option>
+                        <option>сначала дорогие</option>
+                        <option>по жирности</option>
+                  </select>
+               </fieldset>
                <fieldset class="fieldset" style="border:0px;">
                   <legend>Цена:100 руб.100 руб.</legend>
                   <div class="filter-range">
@@ -129,100 +144,94 @@
                   <input type="checkbox" name="jam" value="jam">
                   </label>
                </fieldset>
-               <button type="submit">Применить</button>
+               <button class="submit" type="submit">Применить</button>
             </form>
          </section>
-         <section class="sort">
-            <h3>Сортировка:</h3>
-            <a href="#">по популярности</a>
-            <a href="#">сначала недорогие</a>
-            <a href="#">сначала дорогие</a>
-            <a href="#">по жирности</a>
-         </section>
+         
          <section class="catalog">
             <h3>Каталог</h3>
             <ul class="catalog-list">
                <li>
                   <a href="#">
                      <img src="img/1.jpg" width="267" height="267" alt="Сливочное мороженное с апельсиновым джемом и цитрусовой стружкой">
-                     <span class="price">310 &#x20bd; /кг</span>
+                     <p class="price">310 &#x20bd;<span class="span"> /кг</span></p>
                      <p>Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
                   </a>
                </li>
                <li>
                   <a href="#">
                      <img src="img/2.jpg" width="267" height="267" alt="Сливочно-кофейное мороженное с кусочками шоколада">
-                     <span class="price">380 &#x20bd; /кг</span>
+                     <p class="price">380 &#x20bd;<span  class="span">/кг</span></p>
                      <p>Сливочно-кофейное с кусочками шоколада</p>
                   </a>
                </li>
                <li>
                   <a href="#">
                      <img src="img/3.jpg" width="267" height="267" alt="Сливочно-клубничное мороженное с присыпкой из белого шоколада">
-                     <span class="price">355 &#x20bd; /кг</span>
+                     <p class="price">355 &#x20bd;<span  class="span">/кг</span></p>
                      <p>Сливочно-клубничное с присыпкой из белого шоколада</p>
                   </a>
                </li>
                <li>
                   <a href="#">
                      <img src="img/4.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
-                     <span class="price">415 &#x20bd; /кг</span>
+                     <p class="price">415 &#x20bd;<span  class="span">/кг</span></p>
                      <p>Сливочное крем-брюле с карамельной подливкой</p>
                   </a>
                </li>
                <li>
                   <a href="#">
                      <img src="img/5.jpg" width="267" height="267" alt="Сливочное мороженное с брусничным джемом">
-                     <span class="price">325 &#x20bd; /кг</span>
+                     <p class="price">325 &#x20bd;<span class="span"> /кг</span></p>
                      <p>Сливочное с брусничным джемом</p>
                   </a>
                </li>
                <li>
                   <a href="#">
                      <img src="img/6.jpg" width="267" height="267" alt="Сливочно-черничное мороженное с цельными ягодами черники">
-                     <span class="price">410 &#x20bd; /кг</span>
+                     <p class="price">410 &#x20bd;<span class="span"> /кг</span></p>
                      <p>Сливочно-черничное с цельными ягодами черники</p>
                   </a>
                </li>
                <li>
                   <a href="#">
                      <img src="img/7.jpg" width="267" height="267" alt="Сливочно-лимонное мороженное с карамельной присыпкой">
-                     <span class="price">375 &#x20bd; /кг</span>
+                     <p class="price">375 &#x20bd;<span class="span">/кг</span></p>
                      <p>Сливочно-лимонное с карамельной присыпкой</p>
                   </a>
                </li>
                <li>
                   <a href="#">
                      <img src="img/8.jpg" width="267" height="267" alt="Сливочное мороженное с шоколадной стружкой">
-                     <span class="price">320 &#x20bd; /кг</span>
+                     <p class="price">320 &#x20bd;<span class="span"> /кг</span></p>
                      <p>Сливочное с шоколадной стружкой</p>
                   </a>
                </li>
                <li>
                   <a href="#">
                      <img src="img/9.jpg" width="267" height="267" alt="Сливочно-ванильное мороженное с кусочками шоколада">
-                     <span class="price">440 &#x20bd; /кг</span>
+                     <p class="price">440 &#x20bd;<span class="span"> /кг</span></p>
                      <p>Сливочно-ванильное с кусочками шоколада</p>
                   </a>
                </li>
                <li>
                   <a href="#">
                      <img src="img/10.jpg" width="267" height="267" alt="Сливочноe мороженное с ментоловым сиропом">
-                     <span class="price">435 &#x20bd; /кг</span>
+                     <p class="price">435 &#x20bd;<span class="span">/кг</span></p>
                      <p>Сливочноe с ментоловым сиропом</p>
                   </a>
                </li>
                <li>
                   <a href="#">
                      <img src="img/11.jpg" width="267" height="267" alt="Сливочное мороженное с кусочками черного шоколада">
-                     <span class="price">355 &#x20bd; /кг</span>
+                     <p class="price">355 &#x20bd;<span class="span">/кг</span></p>
                      <p>Сливочное с кусочками черного шоколада</p>
                   </a>
                </li>
                <li>
                   <a href="#">
                      <img src="img/12.jpg" width="267" height="267" alt="Сливочное мороженное с мятным сиропом">
-                     <span class="price">420 &#x20bd; /кг</span>
+                     <p class="price">420 &#x20bd;<sapn class="span"> /кг</sapn></p>
                      <p>Сливочное с мятным сиропом</p>
                   </a>
                </li>
