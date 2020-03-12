@@ -93,53 +93,70 @@
             <form class="filter-form" action="#" method="post">
                <fieldset class="sort fieldset" style="border:0px;">
                   <legend>Сортировка:</legend>
-                  <!--<a href="#">по популярности</a>
-                     <a href="#">сначала недорогие</a>
-                     <a href="#">сначала дорогие</a>
-                     <a href="#">по жирности</a>-->
-                  <select class="sort-select">
-                     <option selected>по популярности</option>
-                     <option>сначала недорогие</option>
-                     <option>сначала дорогие</option>
-                     <option>по жирности</option>
+                  <div class="sort-list">
+                     <a href="#" class="sort-link-visible">по популярности</a>
+                  </div>
+                  <div class="sort-hidden visually-hidden">
+                     <a href="#" class="sort-link-hidden">сначала недорогие</a>
+                     <a href="#" class="sort-link-hidden">сначала дорогие</a>
+                     <a href="#" class="sort-link-hidden">по жирности</a>
+                  </div>
                   </select>
                </fieldset>
-               <fieldset class="fieldset" style="border:0px;">
+               <fieldset class="fieldset fieldset-range" style="border:0px;">
                   <legend>Цена: 100 руб. - 500 руб.</legend>
                   <div class="filter-range">
                      <div class="scale">
                         <div class="bar"></div>
+                        <div class="range-toggle range-toggle-min"></div>
+                        <div class="range-toggle range-toggle-max"></div>
                      </div>
-                     <div class="range-toggle range-toggle-min"></div>
-                     <div class="range-toggle range-toggle-max"></div>
                   </div>
                </fieldset>
                <fieldset class="fieldset fieldset-fat" style="border:0px;">
                   <legend>Жирность:</legend>
                   <div class="fieldset-flex">
-                     <input id="fat-0" type="radio" name="fat" value="0%">
-                     <label for="fat-0">0%</label>
-                     <input id="fat-10" type="radio" name="fat" value="up to 10%" checked>
-                     <label for="fat-10">до 10%</label>
-                     <input id="fat-30" type="radio" name="fat" value="up to 30%">
-                     <label for="fat-30">до 30%</label>
-                     <input id="fat-over" type="radio" name="fat" value="more than 30%">
-                     <label for="fat-over">выше 30%</label>
+                     <div class="radio-container">
+                        <input id="fat-0" type="radio" name="fat" value="0%">
+                        <label for="fat-0">0%</label>
+                     </div>
+                     <div class="radio-container">
+                        <input id="fat-10" type="radio" name="fat" value="up to 10%" checked>
+                        <label for="fat-10">до 10%</label>
+                     </div>
+                     <div class="radio-container">
+                        <input id="fat-30" type="radio" name="fat" value="up to 30%">
+                        <label for="fat-30">до 30%</label>
+                     </div>
+                     <div class="radio-container">
+                        <input id="fat-over" type="radio" name="fat" value="more than 30%">
+                        <label for="fat-over">выше 30%</label>
+                     </div>
                   </div>
                </fieldset>
                <fieldset class="fieldset fieldset-filler" style="border:0px;">
                   <legend>Наполнители:</legend>
                   <div class="fieldset-flex">
-                     <input id="choco" type="checkbox" name="chocolate" value="chocolate" checked>
-                     <label for="choco">шоколадные</label>
-                     <input id="sug" type="checkbox" name="sugar" value="sugar" checked>
-                     <label for="sug">сахарные присыпки</label>
-                     <input id="frt" type="checkbox" name="fruit" value="fruit">
-                     <label for="frt">фрукты</label>
-                     <input id="srp" type="checkbox" name="syrup" value="syrup">
-                     <label for="srp">сиропы</label>
-                     <input id="jam" type="checkbox" name="jam" value="jam">
-                     <label for="jam">джемы</label>
+                     <div class="checkbox-container">
+                        <input id="choco" type="checkbox" name="chocolate" value="chocolate" checked>
+                        <label for="choco">шоколадные</label>
+                     </div>
+                     <div class="checkbox-container">
+                        <input id="sug" type="checkbox" name="sugar" value="sugar" checked>
+                        <label for="sug">сахарные присыпки</label>
+                     </div>
+                     <div class="checkbox-container">
+                        <input id="frt" type="checkbox" name="fruit" value="fruit">
+                        <label for="frt">фрукты</label>
+                     </div>
+                     <div class="checkbox-container">
+                        <input id="srp" type="checkbox" name="syrup" value="syrup">
+                        <label for="srp">сиропы</label>
+                     </div>
+                     <div class="checkbox-container">
+                        <input id="jam" type="checkbox" name="jam" value="jam">
+                        <label for="jam">джемы</label>
+                     </div>
                   </div>
                </fieldset>
                <button class="submit" type="submit">Применить</button>

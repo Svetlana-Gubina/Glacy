@@ -8,13 +8,14 @@
       <link href="css/styles.css" rel="stylesheet">
    </head>
    <body class="background-green">
-      
+
       <header class="page-header">
          <a class="logo"><img src="img/logo.png" width="154" height="64" alt="Логотип Glacy shop"></a>
          <ul class="main-navigation">
             <li>
-               <a id="cat-link" href="#">Каталог</a>
-               <ul id="submenu" class="submenu">
+               <a id="cat-link" href="#">
+                  Каталог</a>
+               <ul id="submenu" class="submenu visually-hidden">
                   <li><a class="new" href="#">Новинки</a></li>
                   <li><a href="inner.html">Сливочное</a></li>
                   <li><a href="#">Щербет</a></li>
@@ -29,7 +30,7 @@
 
             <div class="user-navigation">
                <button id="search-button" class="search" type="button">Поиск</button>
-               <div id="search" class="modal modal-search">
+               <div id="search" class="modal modal-search visually-hidden">
                   <form action="#" method="post">
                      <label> 
                      <input type="search" name="search" placeholder=" Что ищем?">
@@ -38,7 +39,7 @@
                </div>
 
                <a id="login" class="login-link" href="#">Вход</a>
-               <div id="login-form" class="modal modal-login">
+               <div id="login-form" class="modal modal-login visually-hidden">
                   <form action="#" method="post">
                      <label>
                      <input class="login-email" type="email" name="email" placeholder="Электронная почта">
@@ -172,11 +173,10 @@
                <p>Для заказов по телефону:</p>
                <p class="tel">8 812 450-25-25 </p>
                <span class="working-hours">(с 10 до 20 ежедневно)</span>
-               <a class="button" href="#">Форма обратной связи</a>
+               <a class="button button-feedback" href="#">Форма обратной связи</a>
             </div>
          </section>
       </main>
-      <div class="modal modal-overlay visually-hidden"></div>
       <footer class="page-footer">
          <div class="column">
             <ul class="socials-list">
@@ -237,6 +237,7 @@
             </div>
          </div>
       </footer>
+      <div class="modal modal-overlay visually-hidden"></div>
       <section class="modal modal-feedback visually-hidden">
          <h3 class="visually-hidden">Форма обратной свзяи</h3>
          <p>Мы обязательно вам ответим!</p>
@@ -253,6 +254,6 @@
          <button class="modal-close" type="button">Закрыть</button>
       </section>
       <script src="js/popup.js"></script>
-   
+      <script src="js/body.js"></script>
    </body>
 </html>
