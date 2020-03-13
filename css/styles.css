@@ -1096,7 +1096,7 @@ input[type="search"] {
 	background-size: 100% 100%;
 	border-radius: 20px;
 
-	max-height: 222px;
+	min-height: 222px;
 }
 .blog p {
 	margin: 0;
@@ -1149,7 +1149,7 @@ input[type="search"] {
 	border-radius: 20px;
 	background-image: repeating-linear-gradient(135deg, red 0, red 8.5px, blue 8.5px, blue 16.5px, white 16.5px, white 25px);
 	
-	max-height: 222px;
+	min-height: 222px;
 }
 
 .bg-white {

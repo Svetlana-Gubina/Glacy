@@ -18,6 +18,7 @@
         evt.preventDefault();
         modalOpen(feedbackForm);
         modalOpen(overlay);
+        feedbackForm.classList.add('modal-open');
     });
 
     var feedbackClose = function () {
@@ -27,12 +28,13 @@
 
     btnClose.addEventListener("click", feedbackClose);
     overlay.addEventListener("click", feedbackClose);
-    // document.addEventListener('keydown', function(evt) {
-    //     evt.preventDefault();
-    //     if (evt.key === 'Escape') {
-    //         modalOpen(feedbackForm);
-    //         modalOpen(overlay);
-    //     }
-    // });
+
+    window.addEventListener('keydown', function(evt) {
+        evt.preventDefault();
+        if (evt.key === 'Escape') {
+            modalClose(feedbackForm);
+            modalClose(overlay);
+        }
+    });
 })();
 
