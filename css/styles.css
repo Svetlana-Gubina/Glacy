@@ -51,7 +51,7 @@ body {
 	height: auto;
 
 	color: #ffffff;
-	font-family: 'Roboto', Arial, sans-serif;
+	font-family: "Roboto", Arial, sans-serif;
 	font-size: 16px;
 	line-height: 1.5;
 }
@@ -84,7 +84,7 @@ body {
 /* INPUT*/
 input::-webkit-input-placeholder {
 	color: #999999;
-	font-family: 'Roboto', Arial, sans-serif;
+	font-family: "Roboto", Arial, sans-serif;
 	font-size: 1rem;
 	font-weight: 400;
 	line-height: 1.5rem;
@@ -92,7 +92,7 @@ input::-webkit-input-placeholder {
 
 input:-moz-placeholder {
 	color: #999999;
-	font-family: 'Roboto', Arial, sans-serif;
+	font-family: "Roboto", Arial, sans-serif;
 	font-size: 1rem;
 	font-weight: 400;
 	line-height: 1.5;
@@ -115,7 +115,7 @@ input:-moz-placeholder {
 	padding: 1.5%;
 	padding-bottom: 0;
 
-	font-family: 'Roboto', Arial, sans-serif;
+	font-family: "Roboto", Arial, sans-serif;
 	color: #ffffff;
 
 }
@@ -367,7 +367,7 @@ input:-moz-placeholder {
 
 	border-radius: 0;
 	color: #323232;
-	font-family: 'Roboto', Arial, sans-serif;
+	font-family: "Roboto", Arial, sans-serif;
 
 	font-size: 14px;
 	font-weight: 400;
@@ -441,7 +441,7 @@ input:-moz-placeholder {
 	display: block;
 	text-align: left;
 	color: #323232;
-	font-family: 'Roboto', Arial, sans-serif;
+	font-family: "Roboto", Arial, sans-serif;
 	font-size: 14px;
 	font-weight: 400;
 	line-height: 1.5;
@@ -511,7 +511,7 @@ input[type="search"] {
 	margin-bottom: 25px;
 	padding: 0;
 	color: #323232;
-	font-family: 'Roboto', Arial, sans-serif;
+	font-family: "Roboto", Arial, sans-serif;
 	font-size: 24px;
 	font-weight: 700;
 	line-height: 28px;
@@ -554,7 +554,7 @@ input[type="search"] {
 	padding-bottom: 0.5em;
 	padding-left: 1em;
 	padding-right: 1em;
-	font-family: 'Roboto', Arial, sans-serif;
+	font-family: "Roboto", Arial, sans-serif;
 	font-size: 18px;
 	font-weight: 700;
 	line-height: 24px;
@@ -656,6 +656,15 @@ input[type="search"] {
 	text-align: center;
 }
 
+
+@media screen and (min-width: 900px) and  (max-width: 1165px) {
+	.slider h2 {
+		width: 80%;
+		left: 15%;
+	}
+}
+
+
 .slider .button {
 	font-size: 2rem;
 	line-height: 2.75rem;
@@ -685,7 +694,7 @@ input[type="search"] {
 	justify-content: space-between;
 	position: absolute;
 	bottom: 12%;
-	left: 1.5%;
+	left: 1%;
 }
 
 @media screen and (max-width: 900px)  {
@@ -722,29 +731,34 @@ input[type="search"] {
 /* Special offers*/
 
 .special-offers {
-	z-index: 1000;
+    position: relative;
 	width: 100%;
 	box-sizing: border-box;
 	margin: 0;
-	margin-bottom: 0.9%;
+	margin-bottom: 2%;
 	padding: 0;
 	padding-left: 2%;
 	padding-right: 2%;
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
+	min-height: 230px;
 }
 .banner {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	width: 49%;
+	width: 47%;
+	min-height: 230px;
 	padding: 2%;
 	box-sizing: border-box;
 	border-radius: 20px;
 	margin-bottom: 2%;
+	
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
 }
+
 .banner:first-of-type {
+	position: absolute;
+	top: -1%;
+	left: 1%;
+
 	background-image: url("../img/raspberry_field.jpg");
 	background-position: 0 0;
 	background-repeat: no-repeat;
@@ -753,6 +767,9 @@ input[type="search"] {
 }
 
 .banner:last-of-type {
+	position: absolute;
+	top: -1%;
+	right: 3.5%;
 	background-image: url("../img/chocolate.jpg");
 	background-position: 0 0;
 	background-repeat: no-repeat;
@@ -881,7 +898,7 @@ input[type="search"] {
 
 	padding: 0;
 	color: #ffffff;
-	font-family: 'Roboto', Arial, sans-serif;
+	font-family: "Roboto", Arial, sans-serif;
 	font-size: 1rem;
 	font-weight: 500;
 	line-height: 1.3;
@@ -913,7 +930,7 @@ input[type="search"] {
 	bottom: 25%;
 	text-shadow: 1px 1px 3px rgba(49, 50, 53, 0.5);
 	color: #ffffff;
-	font-family: 'Roboto', Arial, sans-serif;
+	font-family: "Roboto", Arial, sans-serif;
 
 	font-size: 2.8125rem;
 	font-weight: 700;
@@ -938,17 +955,19 @@ input[type="search"] {
 .catalog-list .price .span {
 	font-size: 1.875rem;
 }
+
 /* INFO*/
+
 .info {
 	width: 96%;
 	box-sizing: border-box;
 	margin: auto;
-	margin-bottom: 3.3333%;
+	margin-bottom: 3.3%;
 
 	padding-top: 2.5%;
 	padding-bottom: 2.5%;
-	padding-left: 1.6666%;
-	padding-right: 1.6666%;
+	padding-left: 1.6%;
+	padding-right: 1.6%;
 
 	border-radius: 20px;
 	background-image: url("../img/promo.jpg");
@@ -986,11 +1005,13 @@ input[type="search"] {
 	color: #323232;
 	font-size: 1rem;
 	font-weight: 400;
-	line-height: 1.375rem;;
+	line-height: 1.375rem;
 }
+
 .info .right {
 	padding-left: 7%;
 }
+
 .info p::before {
 	content: "";
 	position: absolute;
@@ -1038,7 +1059,7 @@ input[type="search"] {
 .blog-container {
 	width: 100%;
 	margin: 0;
-	margin-bottom: 3.3333%;
+	margin-bottom: 3.3%;
 
 	padding: 0;
 	padding-left: 2%;
@@ -1055,24 +1076,26 @@ input[type="search"] {
 
 	padding-top: 2%;
 	padding-bottom: 7%;
-	padding-left: 1.6666%;
-	padding-right: 1.6666%;
+	padding-left: 1.6%;
+	padding-right: 1.6%;
 
 	background-image: url("../img/strawberry_field.jpg");
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 	border-radius: 20px;
+
+	max-height: 222px;
 }
 .blog p {
 	margin: 0;
-	margin-bottom: 1.6666%;
+	margin-bottom: 1.6%;
 	padding: 0;
 
 	color: #323232;
-	font-family: Roboto, Arial, sans-serif;
-	font-size: 1rem;
+	font-family: "Roboto", Arial, sans-serif;
+	font-size: 16px;
 	font-weight: 500;
-	line-height: 1.375rem;
+	line-height: 1.3;
 }
 
 .blog a {
@@ -1080,12 +1103,13 @@ input[type="search"] {
 	width: 60%;
 
 	color: #323232;
-	font-family: Roboto, Arial, sans-serif;
+	font-family: "Roboto", Arial, sans-serif;
 	font-size: 1.5rem;
 	font-weight: 700;
-	line-height: 1.875rem;
+	line-height: 1.2;
 	text-decoration: underline;
 }
+
 @media screen and (max-width: 900px) {
 	.blog {
 		padding-top: 3%;
@@ -1102,6 +1126,7 @@ input[type="search"] {
         background-color: rgba(255, 255, 255, 0.8);
 	}
 }
+
 /* Subscription */
 
 .subscription {
@@ -1111,7 +1136,10 @@ input[type="search"] {
 	box-sizing: border-box;
 	border-radius: 20px;
 	background-image: repeating-linear-gradient(135deg, red 0, red 8.5px, blue 8.5px, blue 16.5px, white 16.5px, white 25px);
+	
+	max-height: 222px;
 }
+
 .bg-white {
 	margin: auto;
 
@@ -1180,6 +1208,13 @@ input[type="search"] {
 		width: 55%;
 	}
 }
+
+@media screen and (min-width: 900px) and (max-width: 1212px) {
+	.subscription input[type="email"] {
+		width: 50%;
+	}
+}
+
 /*MAP*/
 
 .map {
@@ -1198,6 +1233,7 @@ input[type="search"] {
 	background-repeat: no-repeat, no-repeat;
 	background-size: 18% 33%, 100% 100%;
 }
+
 @media screen and (max-width: 900px) {
 	.map {
 	background-image: url("../img/map-pin.png"), url("../img/map.png");
@@ -1206,9 +1242,10 @@ input[type="search"] {
 	background-size: 28% 43%, 100% 100%;
 	}
 }
+
 .location-info {
 	width: 27%;
-	min-height: 25.6666667%;
+	min-height: 25.6%;
 
 	padding: 3%;
 	border-radius: 20px;
@@ -1218,9 +1255,10 @@ input[type="search"] {
 	justify-content: space-between;
 	background-color: #ffffff;
 }
+
 @media screen and (max-width: 900px) {
 	.location-info {
-		width: 33.8888889%;
+		width: 33.88%;
 	}
 }
 .map p {
@@ -1230,7 +1268,7 @@ input[type="search"] {
 	text-align: left;
 	color: #323232;
 
-	font-family: Roboto, Arial, sans-serif;
+	font-family: "Roboto", Arial, sans-serif;
 	font-size: 0.875rem;
 	font-weight: 400;
 	line-height: 1.25rem;
@@ -1246,7 +1284,8 @@ input[type="search"] {
 	color: #323232;
 	font-size: 1rem;
 	font-weight: 700;
-	line-height: 1.5rem;
+	line-height: 1.5;
+	letter-spacing: 1px;
 }
 
 .map .working-hours {
@@ -1268,7 +1307,9 @@ input[type="search"] {
 
 	padding-top: 0.9em;
 	padding-bottom: 0.9em;
+	align-self: center;
 }
+
 /* FOOTER*/
 
 .page-footer {
@@ -1285,14 +1326,12 @@ input[type="search"] {
 	padding-right: 2%;
 	padding-left: 2%;
 
-	outline: 3px solid blue;
+	outline: 3px dashed blue;
 
 }
 .page-footer .column {
 	display: flex;
 	max-width: 30%;
-
-	background-color: chartreuse;
 }
 .socials-list {
 	margin: auto;
@@ -1344,17 +1383,19 @@ input[type="search"] {
 	justify-content: space-between;
 	flex-wrap: wrap;
 }
+
 @media screen and (max-width: 900px) {
 	.important-links {
 		min-width: 40%;
 	}
 }
+
 .important-links a {
 	display: block;
 	padding: 0.3em;
 	
 	text-decoration: underline;
-	font-family: Roboto, Arial, sans-serif;
+	font-family: "Roboto", Arial, sans-serif;
 	color: #ffffff;
 	font-size: 0.8125rem;
 	font-weight: 400;
@@ -1387,13 +1428,14 @@ input[type="search"] {
 	padding: 0;
 
 	color: #fefefe;
-	font-family: Roboto, Arial, sans-serif;
+	font-family: "Roboto", Arial, sans-serif;
 	font-size: 0.75rem;
 	font-weight: 400;
 	line-height: 1.125rem;
 }
 
 /*PAGE-2*/
+
 .filter {
 	/*
 	outline: 3px solid red;
@@ -1402,7 +1444,7 @@ input[type="search"] {
 
 .filter h2 {
   color: #ffffff;
-  font-family: Roboto, Arial, sans-serif;
+  font-family: "Roboto", Arial, sans-serif;
   font-size: 35px;
   font-weight: 700;
   line-height: 41px;

@@ -20,11 +20,9 @@
         modal.classList.remove("visually-hidden");
     };
 
-    cat.addEventListener('mouseenter', function(evt) {
-        modalOpen(submenu);
-        cat.addEventListener('mouseout', function(evt) {
-            modalClose(submenu);
-        });
+    cat.addEventListener('click', function(evt) {
+        evt.preventDefault();
+        submenu.classList.toggle("visually-hidden");
     });
 
     searchButton.addEventListener("click", function(evt) {
